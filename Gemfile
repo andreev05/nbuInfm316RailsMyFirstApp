@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+# making your Gemfile safe for Heroku
+ruby '2.2.0'   # just in case - tell Heroku which Ruby version we need
 #use Haml for templates 
 gem 'haml'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,8 +46,7 @@ group :development do
   gem 'spring'
 end
 
-# making your Gemfile safe for Heroku
-ruby '2.3.0'   # just in case - tell Heroku which Ruby version we need
+
 group :development, :test do
   # make sure sqlite3 gem ONLY occurs inside development & test groups
   gem 'sqlite3' # use SQLite only in development and testing
